@@ -1,1 +1,22 @@
-some yaml
+connector:
+    name: CI QuickStart
+    identifier: CI_QuickStart
+    description: ""
+    orgIdentifier: default
+    projectIdentifier: dummy
+    type: Github
+    spec:
+        url: https://github.com/sachin-c0d3/goHelloWorldServer
+        authentication:
+            type: Http
+            spec:
+                type: UsernameToken
+                spec:
+                    username: sachin-c0d3
+                    tokenRef: name
+        apiAccess:
+            type: Token
+            spec:
+                tokenRef: name
+        executeOnDelegate: false
+        type: Repo
